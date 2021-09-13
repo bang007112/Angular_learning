@@ -1,4 +1,5 @@
 export class Promotion {
+    [x: string]: any;
     id!: string;
     name!: string;
     image!: string;

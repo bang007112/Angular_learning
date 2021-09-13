@@ -18,8 +18,7 @@ export class DishdetailComponent implements OnInit {
       private location: Location) { }
   
     ngOnInit() {
-      const id = this.route.snapshot.params['id'];
-      this.dishservice.getFeaturedDish().then(dish => this.dish = dish);
+      this.dishservice.getFeaturedDish().subscribe((dish: Dish) => this.dish = dish);
     }
   
     goBack(): void {
